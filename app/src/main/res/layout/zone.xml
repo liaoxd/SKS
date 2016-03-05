@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zonebg"
+    >
+
+    <RelativeLayout
+        android:id="@+id/zonerl1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#55BF93CD"
+
+        >
+        <TextView
+            android:id="@+id/zoneperson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="朋友动态"
+            android:textSize="18dp"
+            android:layout_centerInParent="true"
+            android:textColor="#FFF"
+            />
+
+        <ImageView
+            android:id="@+id/zonearrow"
+            android:layout_height="45dp"
+            android:layout_width="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrowleft"
+            android:clickable="true"
+            />
+        <ImageView
+            android:id="@+id/zoneadd"
+            android:layout_height="45dp"
+            android:layout_width="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/zoneadd"
+            android:clickable="true"
+            />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/zoneListView"
+        android:layout_below="@id/zonerl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>
+
