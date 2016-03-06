@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/gray_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dip" />
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/my_icon"
+            android:paddingLeft="@dimen/space_10"
+            android:layout_width="60dip"
+            android:layout_height="60dip" />
+        <TextView
+            android:id="@+id/my_name"
+            android:layout_toRightOf="@id/my_icon"
+            android:text="Kiplening"
+            android:padding="@dimen/space_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/my_saying"
+            android:text="签名栏"
+            android:padding="@dimen/space_5"
+            android:layout_below="@id/my_name"
+            android:layout_toRightOf="@id/my_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dip" />
+    <TextView
+        android:id="@+id/friends_activity"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/space_10"
+        android:textSize="@dimen/text_size_24"
+        android:text=" 朋友动态"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/say_something"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/space_10"
+        android:textSize="@dimen/text_size_24"
+        android:text=" 来吐槽吧"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dip" />
+    <TextView
+        android:id="@+id/settings"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/space_10"
+        android:textSize="@dimen/text_size_24"
+        android:text=" 设置"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dip" />
+    <TextView
+        android:id="@+id/logout"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/text_size_24"
+        android:text=" 退出登录"
+        android:padding="@dimen/space_10"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

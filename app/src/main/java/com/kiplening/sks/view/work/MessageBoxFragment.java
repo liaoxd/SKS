@@ -1,11 +1,13 @@
 package com.kiplening.sks.view.work;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -43,7 +45,27 @@ public class MessageBoxFragment extends Fragment {
         }
         MyListAdapter adapter = new MyListAdapter(getActivity(), list);
         messageList.setAdapter(adapter);
+        /**
+         * 设置整个Item被点击的事件
+         * 该事件在其他有事件的组件未被点击时触发
+         */
+        messageList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapter, View view,
+                                    int position, long arg3) {
+
+                Intent intent = new Intent(getActivity(),MessageInfoActivity.class);
+                intent.putExtra("content",list.get(position).getContent());
+                intent.putExtra("title",list.get(position).getTitle());
+                intent.putExtra("time",list.get(position).getSend_time().toString());
+                startActivity(intent);
+
+            }
+
+        });
     }
+
 
     @Override
     public void onPause() {
@@ -70,7 +92,7 @@ public class MessageBoxFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 0;
+            return list.size();
         }
 
         @Override
@@ -90,7 +112,8 @@ public class MessageBoxFragment extends Fragment {
             ListItemView listItemView = null;
             if (convertView == null){
                 listItemView = new ListItemView();
-                convertView = listContainer.inflate(R.layout.todo_list_item,null);
+
+                convertView = listContainer.inflate(R.layout.message_list_item,null);
 
                 listItemView.sender = (TextView) convertView.findViewById(R.id.message_sender_name);
                 listItemView.overview = (TextView) convertView.findViewById(R.id.message_overview);
@@ -101,7 +124,7 @@ public class MessageBoxFragment extends Fragment {
                 listItemView = (ListItemView) convertView.getTag();
 
             }
-            listItemView.sender.setText((String)list.get(selectID).getTitle());
+            //listItemView.sender.setText((String)list.get(selectID).getTitle());
             listItemView.overview.setText((String) list.get(selectID).getOverview());
             listItemView.sendTime.setText(list.get(selectID).getSend_time().toString());
             return convertView;

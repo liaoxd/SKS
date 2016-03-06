@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/contact_icon"
+        android:padding="@dimen/space_10"
+        android:layout_width="60dip"
+        android:layout_height="60dip" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/contact_name"
+            android:text="liaoxd"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="35dip" />
+        <TextView
+            android:id="@+id/phone_num"
+            android:text="18384217426"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

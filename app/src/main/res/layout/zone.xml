@@ -2,17 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/zonebg"
     >
 
     <RelativeLayout
         android:id="@+id/zonerl1"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:background="#55BF93CD"
-
-        >
+        android:layout_alignParentTop="true">
         <TextView
             android:id="@+id/zoneperson"
             android:layout_width="wrap_content"
@@ -21,7 +17,7 @@
             android:text="朋友动态"
             android:textSize="18dp"
             android:layout_centerInParent="true"
-            android:textColor="#FFF"
+            android:textColor="@color/black"
             />
 
         <ImageView

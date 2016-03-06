@@ -14,7 +14,7 @@ import com.kiplening.sks.R;
 public class OthersFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.test,null);
+        View view = inflater.inflate(R.layout.layout_others,null);
         return view;
     }
 }
